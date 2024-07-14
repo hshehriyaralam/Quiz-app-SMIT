@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div id="formContainer">
+            <h2>Login Form</h2>
+            <div class="name">
+            <input type="text" id="name" placeholder="Enter Your Name.......">
+        </div>
+            <span class="hide" id="nameErorr">Name Required!</span>        
+            <div class="email">
+            <input type="text" id="email" placeholder="Enter Your Email......">
+        </div>
+            <span class="hide" id="emailError">Email Required!</span>    
+            <button onclick="formSubmitHandler()">Login</button>
+        </div>
+        <div id="startContainer" class="hideQuiz">   
+                <a href="quiz.html">
+                    <button>Start Quiz</button>
+                    
+        </a>  
+        </div> 
+    </div>
+</body>
+<script src="app.js"></script>
+</html>

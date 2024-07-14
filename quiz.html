@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body onload="startQuiz()">
+    <div id="quizContainer">
+        <!-- header -->
+        <header class="header">
+            <section>
+                <h1>Quiz</h1>
+                <div class="nameEmail">
+                <div>
+                    <span id="userName">Sherry</span>
+                </div>
+                <div>
+                    <span id="userEmail">hshehri@gmail.com</span>
+                </div>
+            </div>
+            </section>
+            <section>
+                <div class="timerBox"> 
+                    <span>Time :</span>
+                    <span class="time" id="Minutes">90</span>
+                    <!-- <span class="time" id="Seccond">00</span> -->
+                </div>
+            </section>
+         </header>
+         <!-- Body -->
+        <main class="body">
+            <div id="htmlQues">
+                <h3>HTML is a markup Language </h3>
+            </div>
+            <div>
+                <ol id="htmllOptions">
+                    <li >Hello WOrld</li>
+                    <li >Hello WOrld</li>
+                    <li >Hello WOrld</li>
+                    <li >Hello WOrld</li>
+
+                </ol>
+            </div>
+        </main>
+        <!-- footer -->
+         <footer class="footer">
+            <div id="counter">
+                <div id="currentCount">1</div> of <div id="totalCount">7</div> <span>Question</span>
+            </div>
+            <div>
+                <button onclick="nextQues()" id="nextQuesBtn">Next</button>
+            </div>
+         </footer>
+
+         <!-- Result Container -->
+          <div class="resultContainer hide" >
+            result :
+            <div>
+                <p>
+                    correct Ans:
+                </p>
+                <p id="correctAns" class="correctAns"></p>
+            </div>
+            <div>
+                <p>
+                    wrong Ans
+                </p>
+                <p id="wrongAns" class="wrongAns"> </p>
+            </div>
+
+          </div>
+    </div>
+</body>
+<script src="quiz.js"></script>
+</html>
