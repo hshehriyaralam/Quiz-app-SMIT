@@ -10,25 +10,21 @@
     <div id="quizContainer">
         <!-- header -->
         <header class="header">
-            <section>
+            <section class="headerContent">
                 <h1>Quiz</h1>
-                <div class="nameEmail">
-                <div>
-                    <span id="userName">Sherry</span>
-                </div>
-                <div>
-                    <span id="userEmail">hshehri@gmail.com</span>
-                </div>
-            </div>
             </section>
-            <section>
-                <div class="timerBox"> 
+            <section class="infoSection">
+                <div class="userInfo">
+                    <p><strong>User:</strong> <span id="userName">Sherry</span></p>
+                    <p><strong>Email:</strong> <span id="userEmail">hshehri@gmail.com</span></p>
+                </div>
+                <div class="timerBox">
                     <span>Time :</span>
-                    <span class="time" id="Minutes">90</span>
-                    <!-- <span class="time" id="Seccond">00</span> -->
+                    <span class="time" id="Minutes">120</span>
                 </div>
             </section>
-         </header>
+        </header>
+        
          <!-- Body -->
         <main class="body">
             <div id="htmlQues">
@@ -36,10 +32,10 @@
             </div>
             <div>
                 <ol id="htmllOptions">
+                    <!-- <li >Hello WOrld</li>
                     <li >Hello WOrld</li>
                     <li >Hello WOrld</li>
-                    <li >Hello WOrld</li>
-                    <li >Hello WOrld</li>
+                    <li >Hello WOrld</li> -->
 
                 </ol>
             </div>
@@ -50,28 +46,32 @@
                 <div id="currentCount">1</div> of <div id="totalCount">7</div> <span>Question</span>
             </div>
             <div>
-                <button onclick="nextQues()" id="nextQuesBtn">Next</button>
+                <button onclick="nextQues()" id="nextQuesBtn" class="show">Next</button>
             </div>
          </footer>
-
-         <!-- Result Container -->
-          <div class="resultContainer hide" >
-            result :
-            <div>
-                <p>
-                    correct Ans:
-                </p>
-                <p id="correctAns" class="correctAns"></p>
-            </div>
-            <div>
-                <p>
-                    wrong Ans
-                </p>
-                <p id="wrongAns" class="wrongAns"> </p>
-            </div>
-
-          </div>
+         
+        </div>
+        <!-- Result Container -->
+<div class="resultContainer" id="resultContainer">
+    <h2>Quiz Result</h2>
+    <div>
+        <p><strong>Correct Answers:</strong></p>
+        <p id="correctAns" class="correctAns">10</p>
     </div>
+    <div>
+        <p><strong>Wrong Answers:</strong></p>
+        <p id="wrongAns" class="wrongAns">10</p>
+    </div>
+    <div>
+        <p><strong>Attemp Questions:</strong></p>
+        <p id="totalQuestions" class="totalQuestions">26</p>
+    </div>
+    <div>
+        <p><strong>Grade:</strong></p>
+        <p id="grade" class="grade"></p>
+    </div>
+</div>
+
 </body>
 <script src="quiz.js"></script>
 </html>

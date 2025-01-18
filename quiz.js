@@ -1,14 +1,14 @@
-var questions = [
+let Questions = [
     {
-        id : 1,
-        question : "What is the correct syntax for referring to an external script called 'script.js'?",
-        options:{
-            a:"<script name='script.js'>",
-            b: "<script href='script.js'>",
-            c: "<script src='script.js'>",
-            d: "<script ref='script.js'>",
+        id: 1,
+        question: "Which of the following methods is used to remove the last element from an array in JavaScript?",
+        options: {
+            a: "pop()",
+            b: "push()",
+            c: "shift()",
+            d: "unshift()",
         },
-        answer: "<script src='script.js'>",
+        answer: "pop()",
     },
     {
         id : 2,
@@ -66,26 +66,26 @@ var questions = [
         answer: 'if (i != 5)',
     },
     {
-        id : 7,
-        question : 'How does a WHILE loop start?',
-        options:{
-            a:'while i = 1 to 10',
-            b: 'while (i <= 10; i++)',
-            c: 'while (i <= 10)',
-            d: 'while (i < 10)',
+        id: 7,
+        question: "Which HTML attribute specifies an alternate text for an image?",
+        options: {
+            a: "title",
+            b: "alt",
+            c: "src",
+            d: "description",
         },
-        answer: 'while (i <= 10)',
+        answer: "alt",
     },
     {
-        id : 8,
-        question : 'How does a FOR loop start?',
-        options:{
-            a:'for (i = 0; i <= 5; i++)',
-            b: 'for (i = 0; i <= 5)',
-            c: 'for i = 1 to 5',
-            d: 'for (i <= 5; i++)',
+        id: 8,
+        question: "Which of the following is NOT a valid JavaScript data type?",
+        options: {
+            a: "Number",
+            b: "String",
+            c: "Character",
+            d: "Boolean",
         },
-        answer: 'for (i = 0; i <= 5; i++)',
+        answer: "Character",
     },
     {
         id : 9,
@@ -99,15 +99,15 @@ var questions = [
         answer: '// This is a comment',
     },
     {
-        id : 10,
-        question : 'What is the correct way to write a JavaScript array?',
-        options:{
-            a:' var colors = "red", "green", "blue"',
-            b: 'var colors = 1 = ("red"), 2 = ("green"), 3 = ("blue")',
-            c: 'var colors = ["red", "green", "blue"]',
-            d: 'var colors = (1:"red", 2:"green", 3:"blue")',
+        id: 10,
+        question: "Which CSS property is used to make the text bold?",
+        options: {
+            a: "font-style",
+            b: "font-weight",
+            c: "text-decoration",
+            d: "font-bold",
         },
-        answer: 'var colors = ["red", "green", "blue"]',
+        answer: "font-weight",
     },
     {
         id : 11,
@@ -129,28 +129,28 @@ var questions = [
             c: 'Math.ceil(x, y)',
             d: 'Math.max(x, y)',
         },
-        answer: 'Math.round(7.25)',
+        answer: 'Math.max(x, y)',
     },
     {
-        id : 13,
-        question : 'What is the correct JavaScript syntax for opening a new window called "w2"?',
-        options:{
-            a: 'w2 = window.open("http://www.example.com");',
-            b: 'w2 = window.new("http://www.example.com");',
-            c: 'w2 = window.create("http://www.example.com");',
-            d: 'w2 = window.openNew("http://www.example.com");',
+        id: 13,
+        question: "What will `typeof null` return in JavaScript?",
+        options: {
+            a: "null",
+            b: "undefined",
+            c: "object",
+            d: "string",
         },
-        answer: 'w2 = window.open("http://www.example.com");',
+        answer: "object",
     },
     {
         id : 14,
         question : 'JavaScript is the same as Java.',
         options:{
             a: 'True;',
-            b: ' False ',
+            b: 'False',
       
         },
-        answer: 'False;',
+        answer: 'False',
     },
     {
         id : 15,
@@ -193,137 +193,236 @@ var questions = [
         answer: 'Yes',
     },
     {
-        id : 19,
-        question : 'How to write an object in JavaScript?',
-        options:{
-            a: 'var person = {firstName:"John", lastName:"Doe"}',
-            b: 'var person = {firstName=John, lastName=Doe}',
-            c: 'var person = (firstName:"John", lastName:"Doe")',
-            d: 'var person = (firstName=John, lastName=Doe)',
+        id: 19,
+        question: "Which CSS property is used to change the background color?",
+        options: {
+            a: "color",
+            b: "background",
+            c: "background-color",
+            d: "bgcolor",
         },
-        answer: 'var person = {firstName:"John", lastName:"Doe"}',
+        answer: "background-color",
+    },
+    {
+        id: 20,
+        question: "What is the default value of the 'position' property in CSS?",
+        options: {
+            a: "static",
+            b: "relative",
+            c: "absolute",
+            d: "fixed",
+        },
+        answer: "static",
+    },
+    {
+        id: 21,
+        question: "What does the 'push' method do in JavaScript?",
+        options: {
+            a: "Adds a new element to the beginning of an array",
+            b: "Adds a new element to the end of an array",
+            c: "Removes the last element of an array",
+            d: "Removes the first element of an array",
+        },
+        answer: "Adds a new element to the end of an array",
+    },
+    {
+        id: 22,
+        question: "What will `console.log('5' - 2)` output in JavaScript?",
+        options: {
+            a: "3",
+            b: "52",
+            c: "undefined",
+            d: "NaN",
+        },
+        answer: "3",
+    },
+    {
+        id: 23,
+        question: "What is the output of `typeof NaN` in JavaScript?",
+        options: {
+            a: "NaN",
+            b: "number",
+            c: "undefined",
+            d: "object",
+        },
+        answer: "number",
+    },
+    {
+        id: 24,
+        question: "Which CSS property is used to make the text bold?",
+        options: {
+            a: "font-style",
+            b: "font-weight",
+            c: "text-decoration",
+            d: "font-bold",
+        },
+        answer: "font-weight",
+    },
+    {
+        id: 25,
+        question: "Which built-in method combines the text of two strings and returns a new string?",
+        options: {
+            a: "append()",
+            b: "concat()",
+            c: "attach()",
+            d: "combine()",
+        },
+        answer: "concat()",
+    },
+    {
+        id: 26,
+        question: "What does the 'this' keyword refer to in JavaScript?",
+        options: {
+            a: "The current function",
+            b: "The current object",
+            c: "The parent object",
+            d: "The global object",
+        },
+        answer: "The current object",
     },
 ]
 
 
-// Set UserName and Email
-var userName = document.getElementById("userName");
-var userEmail = document.getElementById("userEmail");
-userName.innerHTML = localStorage.getItem("name");
-userEmail.innerHTML = localStorage.getItem("email");
+
+// set userName and Email
+let userName = document.getElementById('userName')
+let userEmail= document.getElementById('userEmail')
+ userName.innerHTML = localStorage.getItem('name') 
+  userEmail.innerHTML = localStorage.getItem('email') 
+
+//variables 
+let nextQuesBtn =  document.getElementById('nextQuesBtn')
+let quizContainer = document.getElementById('quizContainer')
+let Minutes = document.getElementById('Minutes')
+let htmlQuestion = document.getElementById('htmlQues')
+let htmloptions = document.getElementById('htmllOptions')
+let currentCount = document.getElementById('currentCount')
+let TotalCount = document.getElementById('totalCount')
+TotalCount.innerHTML = Questions.length
 
 
-var htmlQues = document.getElementById("htmlQues");
-var htmlOptions = document.getElementById("htmllOptions");
-var indexNum = 1;
-var nextQuesBtn = document.getElementById("nextQuesBtn");
-var correctAnsCount = 0;
-var wrongAnsCount = 0;
+// Initalize Varibles
+let indexNum = 0
+let timer = 120;
+let CorrectAnserCount = 0
+let wrongAnsCount = 0
+let Attemp = 0
+
+// Result Container 
+let resultContainer = document.getElementById('resultContainer')
+let correctAns = document.getElementById('correctAns')
+let wrongAns = document.getElementById('wrongAns')
+let grade = document.getElementById('grade')
+let attempQuestion = document.getElementById('totalQuestions')
+attempQuestion.innerHTML = Attemp;
 
 
-// Counter
-var CurrentCount = document.getElementById("currentCount");
-var totalCount = document.getElementById("totalCount");
-totalCount.innerHTML = questions.length;
-
-var resultContainer = document.getElementsByClassName("resultContainer")[0];
-var correctAns = document.getElementById("correctAns");
-var wrongAns = document.getElementById("wrongAns");
-
-
-
+// Start Quizz
 function startQuiz(){
-    // console.log("startQuiz" , question[indexNum].options) ;
-    htmlQues.innerHTML  = questions[indexNum].question;
-
-    htmlOptions.innerHTML = ""
-    for(var key in questions[indexNum].options){
-        var option = questions[indexNum].options[key]
-       htmlOptions.innerHTML += `<li onclick="checkAnswer(this, '${option}')">${option}</li>`
-      
+    // Question
+    htmlQuestion.innerHTML = Questions[indexNum].question
+    
+    //Options
+    htmloptions.innerHTML = ""
+    for(let key in Questions[indexNum].options){
+        let option = Questions[indexNum].options[key]
+        htmloptions.innerHTML += `<li onclick="answerChecker(this, '${option}')">${option}</li>`
     }
-    timer()
+    
+    nextQuesBtn.style.display = 'none'
 }
 
-// function shuffle(array) {
-//     for (let i = array.length - 1; i > 0; i--) {
-//         const j = Math.floor(Math.random() * (i + 1));
-//         [array[i], array[j]] = [array[j], array[i]];
-//     }
-// }
-
-// function startQuiz() {
-//     shuffle(questions); // Shuffle the questions array
-//     indexNum = 0;
-//     loadQuestion();
-// }
-
-// function loadQuestion() {
-//     htmlQues.innerHTML  = questions[indexNum].question;
-//     htmlOptions.innerHTML = "";
-//     for (var key in questions[indexNum].options) {
-//         var option = questions[indexNum].options[key];
-//         htmlOptions.innerHTML += `<li onclick="checkAnswer(this, '${option}')">${option}</li>`;
-//     }
-// }
 
 
 
-var quizContainer = document.getElementById("quizContainer");
 function nextQues(){
-    if(indexNum < questions.length -1 ){
-        indexNum++;
-        CurrentCount.innerHTML++;
-        console.log("nexques", indexNum);
-        nextQuesBtn.className = "hide";
-        startQuiz();
+    if(indexNum < Questions.length - 1){
+        currentCount.innerHTML++;
+        indexNum++
+        startQuiz()
+        
+        
     }else{
-        console.log("Khatam");
-        quizContainer.style.display = "none"
-        resultContainer.className = "show";
-        correctAns.innerHTML = correctAnsCount;
-        wrongAns.innerHTML = wrongAnsCount;
-    }
-    console.log(correctAnsCount, "Correct Answer");
-    console.log(wrongAnsCount, "Wrong Answer");
-}
-function checkAnswer (ele){
-    //1st way
-    // console.log("ele", ele.innerHTML);
-    // console.log("check", ele.innerHTML ===  questions[indexNum].answer);
-    // console.log("question[indexNum]", questions[indexNum].answer);
-
-    var liOptions = htmlOptions.getElementsByTagName("li");
-    var isCheck = ele.innerHTML === questions[indexNum].answer;
-    if (isCheck){
-        console.log("Correct!");
-        ele.style.backgroundColor = "#36C95B";
-        ele.style.color = "#EFEEEF";
-        correctAnsCount++;
-
-    }else{
-        console.log("Incorrect");
-        ele.style.backgroundColor = "#F8504F";
-        ele.style.color = "#EFEEEF";
-        wrongAnsCount++;
-        for(var li of liOptions){
-            if(li.innerHTML === questions[indexNum].answer){
-                li.className = "correctAns";
-            }
+        console.log("khatam");
+        quizContainer.style.display = 'none'
+        resultContainer.style.display = 'block'
+        correctAns.innerHTML = CorrectAnserCount
+        wrongAns.innerHTML = wrongAnsCount  
+        if(CorrectAnserCount >= 20 &&  CorrectAnserCount <= 26){
+            grade.innerHTML = "Excellent"
+        }else if(CorrectAnserCount >= 15 &&  CorrectAnserCount < 20){
+            grade.innerHTML = "Needs Improvement"
+        }else if(CorrectAnserCount < 15){
+             grade.innerHTML = "Fail"
         }
     }
+    
+}
 
-    // console.log("htmlOPtions", htmlOptions.getElementsByTagName("li"));
-    for (var li of liOptions){
-        console.log(li);
-        li.style.pointerEvents = "none";
-        li.style.cursor = "no-drop !important"
+// Answer Checker 
+function answerChecker(option){
+    // console.log(option.innerHTML);
+    // console.log(option.innerHTML === Questions[indexNum].answer);
+    
+    
+    let isCheck = option.innerHTML === Questions[indexNum].answer
+    let liOption = htmloptions.getElementsByTagName('li')
+    if(isCheck){
+        // console.log("Correct");
+        CorrectAnserCount++;
+        option.style.backgroundColor = "#36C95B";
+        option.style.color = "#EFEEEF";
+        Attemp++;
+        attempQuestion.innerHTML = Attemp
+        
+    }else{
+        // console.log("inCorrect");
+        option.style.backgroundColor = "#F8504F";
+        option.style.color = "#EFEEEF";
+        wrongAnsCount++;
+        Attemp++;
+        attempQuestion.innerHTML = Attemp
+        
+        for(let li of liOption){
+            if(li.innerHTML === Questions[indexNum].answer){
+                li.className = 'correctAns'
+            }
+        }
+        // console.log(CorrectAnserCount,"CorrectAnserCount");
+        // console.log(wrongAnsCount,"wrongAnsCount");
+        
     }
-
-    // show next Question the Selection
-    nextQuesBtn.className = "show"
+    for(let li of liOption){
+        li.style.pointerEvents = 'none';
+        li.style.cursor = 'no-drop !important'
+    }
+    nextQuesBtn.style.display = 'block'
 }
-function timer(){
 
 
+
+
+
+
+
+// Timer 
+function Timer(){
+    
+    setInterval(() => {
+        Minutes.innerHTML = timer
+        timer--
+        if(timer == 0){
+            console.log("khatam");
+            quizContainer.style.display = 'none'
+            resultContainer.style.display = 'block'
+            correctAns.innerHTML = CorrectAnserCount
+            wrongAns.innerHTML = wrongAnsCount  
+            attempQuestion.innerHTML = Attemp
+            if(Attemp === 0 && Attemp <= 15){
+                grade.innerHTML = "Fail"
+            }
+        }
+    },1000)
+    
 }
+Timer() 

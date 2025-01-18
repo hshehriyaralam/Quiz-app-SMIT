@@ -1,27 +1,32 @@
-var formContainer = document.getElementById("formContainer");
-var startConatainer = document.getElementById("startContainer");
+let formContainer = document.getElementById('formContainer');
+let startContainer = document.getElementById('startContainer')
 
-function formSubmitHandler(){
-    var name = document.getElementById("name");
-    var email = document.getElementById("email");
-    var nameErorr = document.getElementById("nameErorr");
-    var emailErorr = document.getElementById("emailError");
+  document.getElementById('login').addEventListener('click',() => {
 
-
-    if(!name.value){
-        nameErorr.className = "show";
+      let name = document.getElementById('name')
+      let email = document.getElementById('email')
+      let nameError = document.getElementById('nameErorr')
+      let emailError = document.getElementById('emailError')
+      
+      
+      if(!name.value){
+        nameError.className = "showError";
+        setTimeout(() => {
+            nameError.className = "hide"
+        },1000)
         return
     }
     if(!email.value){
-        emailErorr.className = "show"
+        emailError.className = "showError"
+        setTimeout(() => {
+            emailError.className = "hide"
+        },1000)
          return
-    }
-
-    localStorage.setItem("name", name.value);
-    localStorage.setItem("email", email.value);
-    formContainer.className = "hide";
-    startConatainer.className = "ShowQuiz";
-    console.log("FormSubmitt");
-   
-
-}
+        }
+        
+        localStorage.setItem('name', name.value)
+        localStorage.setItem('email', email.value)
+        formContainer.className = 'hide';
+        startContainer.className = 'show'
+        console.log("form Submitt");
+})
